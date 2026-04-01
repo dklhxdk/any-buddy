@@ -14,7 +14,10 @@ function parseArgs(argv) {
     else if (arg === '--eye' || arg === '-e') { flags.eye = args[++i]; }
     else if (arg === '--hat' || arg === '-t') { flags.hat = args[++i]; }
     else if (arg === '--name' || arg === '-n') { flags.name = args[++i]; }
+    else if (arg === '--personality' || arg === '-p') { flags.personality = args[++i]; }
     else if (arg === '--shiny') { flags.shiny = true; }
+    else if (arg === '--peak') { flags.peak = args[++i]; }
+    else if (arg === '--dump') { flags.dump = args[++i]; }
     else if (arg === '--silent') { flags.silent = true; }
     else if (arg === '--no-hook') { flags.noHook = true; }
     else if (arg === '--yes' || arg === '-y') { flags.yes = true; }
@@ -85,7 +88,10 @@ Options:
   -t, --hat <name>       Hat (none, crown, tophat, propeller, halo, wizard,
                          beanie, tinyduck)
   -n, --name <name>      Rename your companion
+  -p, --personality <desc>  Set companion personality
   --shiny                Require shiny (~100x longer search)
+  --peak <stat>          Best stat (DEBUGGING, PATIENCE, CHAOS, WISDOM, SNARK)
+  --dump <stat>          Worst stat (~20x longer search with both)
   -y, --yes              Skip confirmation prompts
   --no-hook              Don't offer to install the SessionStart hook
   --silent               Suppress output (for apply command in hooks)
