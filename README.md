@@ -207,7 +207,7 @@ When you choose to install the hook, it adds this to `~/.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "any-buddy apply --silent"
+            "command": "npx any-buddy apply --silent"
           }
         ]
       }
